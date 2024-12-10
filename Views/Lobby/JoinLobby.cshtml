@@ -1,0 +1,15 @@
+<h2>Lobby : @Model.Id</h2>
+<p>Jeu : @Model.GameType</p>
+<p>Joueurs connectés : @string.Join(", ", Model.Players)</p>
+
+@if (!Model.IsFull)
+{
+    <form method="get" asp-action="JoinLobby" asp-route-lobbyId="@Model.Id">
+        <input type="text" name="playerName" placeholder="Entrez votre pseudo" required />
+        <button type="submit">Rejoindre</button>
+    </form>
+}
+else
+{
+    <p>Le lobby est complet. En attente du démarrage de la partie...</p>
+}

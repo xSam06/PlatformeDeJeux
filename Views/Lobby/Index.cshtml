@@ -1,0 +1,32 @@
+<h2>Liste des Lobbys</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Jeu</th>
+            <th>Joueurs</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var lobby in Model)
+        {
+            <tr>
+                <td>@lobby.Id</td>
+                <td>@lobby.GameType</td>
+                <td>@lobby.Players.Count / 2</td>
+                <td>
+                    <a asp-action="JoinLobby" asp-route-lobbyId="@lobby.Id">Rejoindre</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<h3>Créer un nouveau lobby</h3>
+<form asp-action="CreateLobby" method="post">
+    <select name="gameType">
+        <option value="Morpion">Morpion</option>
+    </select>
+    <button type="submit">Créer</button>
+</form>

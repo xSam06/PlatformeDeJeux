@@ -1,0 +1,50 @@
+@model PlatformeDeJeux.Models.Morpion
+
+<h2 class="title">Jeu du Morpion</h2>
+
+<p>Partagez ce lien avec votre adversaire :</p>
+<input type="text" value="@Url.Action("Play", "Morpion", new { id = Model.LobbyId }, Context.Request.Scheme)" readonly onclick="this.select();" class="share-url" />
+
+<div class="game-container">
+    <table class="game-board">
+        @for (int i = 0; i < 3; i++)
+        {
+            <tr>
+                @for (int j = 0; j < 3; j++)
+                {
+                    <td>
+                        @if (Model.Board[i, j] == null)
+                        {
+                            <form asp-action="PlayMove" method="post">
+                                <input type="hidden" name="id" value="@Model.LobbyId" />
+                                <input type="hidden" name="row" value="@i" />
+                                <input type="hidden" name="col" value="@j" />
+                                <button type="submit" class="cell-button">Jouer</button>
+                            </form>
+                        }
+                        else
+                        {
+                            <span class="cell-content">@Model.Board[i, j]</span>
+                        }
+                    </td>
+                }
+            </tr>
+        }
+    </table>
+</div>
+
+<div class="game-info">
+    @if (Model.IsGameOver)
+    {
+        <p class="game-status">Partie terminée ! Gagnant : <span class="winner">@Model.Winner</span></p>
+    }
+    else
+    {
+        <p class="game-status">Tour de : <span class="current-player">@Model.CurrentPlayer</span></p>
+    }
+
+    <form asp-action="Replay" method="post">
+        <input type="hidden" name="id" value="@Model.LobbyId" />
+        <button type="submit" class="replay-button">Rejouer</button>
+    </form>
+</div>
