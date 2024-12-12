@@ -2038,31 +2038,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\samy\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "/home/sam/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\samy\\Desktop\\PlatformeDeJeux-develop\\PlatformeDeJeux.csproj",
+      "projectUniqueName": "/home/sam/Bureau/plateforme/PlatformeDeJeux/PlatformeDeJeux.csproj",
       "projectName": "PlatformeDeJeux",
-      "projectPath": "C:\\Users\\samy\\Desktop\\PlatformeDeJeux-develop\\PlatformeDeJeux.csproj",
-      "packagesPath": "C:\\Users\\samy\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\samy\\Desktop\\PlatformeDeJeux-develop\\obj\\",
+      "projectPath": "/home/sam/Bureau/plateforme/PlatformeDeJeux/PlatformeDeJeux.csproj",
+      "packagesPath": "/home/sam/.nuget/packages/",
+      "outputPath": "/home/sam/Bureau/plateforme/PlatformeDeJeux/obj/",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\samy\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/home/sam/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2075,13 +2068,7 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "all"
-      },
-      "SdkAnalysisLevel": "9.0.100"
+      }
     },
     "frameworks": {
       "net8.0": {
@@ -2111,50 +2098,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.110/PortableRuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Le package 'Microsoft.AspNetCore.WebSockets' 2.2.0 présente une vulnérabilité de gravité élevé(e) connue, https://github.com/advisories/GHSA-6px8-22w5-w334.",
-      "libraryId": "Microsoft.AspNetCore.WebSockets",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Le package 'Newtonsoft.Json' 11.0.2 présente une vulnérabilité de gravité élevé(e) connue, https://github.com/advisories/GHSA-5crp-9r3c-p9vr.",
-      "libraryId": "Newtonsoft.Json",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Le package 'System.Net.WebSockets.WebSocketProtocol' 4.5.1 présente une vulnérabilité de gravité élevé(e) connue, https://github.com/advisories/GHSA-6px8-22w5-w334.",
-      "libraryId": "System.Net.WebSockets.WebSocketProtocol",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    },
-    {
-      "code": "NU1904",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Le package 'System.Text.Encodings.Web' 4.5.0 présente une vulnérabilité de gravité critique connue, https://github.com/advisories/GHSA-ghhp-997w-qr28.",
-      "libraryId": "System.Text.Encodings.Web",
-      "targetGraphs": [
-        "net8.0"
-      ]
-    }
-  ]
+  }
 }
